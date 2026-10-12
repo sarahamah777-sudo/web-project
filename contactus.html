@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.5;
+            text-align: center;          /* Centers all text */
+        }
+
+        h1, h2, h3, p {
+            text-align: center;
+        }
+
+        .options label {
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .form-section {
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"], 
+        input[type="tel"],
+        textarea {
+            width: 90%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 8px auto;
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            text-align: center;          /* Centers text inside inputs */
+        }
+
+        textarea {
+            height: 90px;
+            resize: vertical;
+        }
+
+        .checkbox {
+            margin: 18px auto;
+            text-align: center;
+            max-width: 450px;
+        }
+
+        .checkbox label {
+            font-weight: normal;
+            display: inline;
+        }
+
+        input[type="submit"] {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #16213e;
+        }
+
+        .social-links {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .social-links a {
+            display: block;
+            margin: 10px 0;
+            color: #1a1a2e;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 35px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <p>CONTACT US</p>
+    <h1>What would you like to do?</h1>
+
+    <form action="/action_page.php" method="post">
+
+        <div class="options">
+            <label>
+                <input type="radio" name="property" value="buy" checked>
+                Buy a Property
+            </label>
+            <label>
+                <input type="radio" name="property" value="sell">
+                Sell a Property
+            </label>
+            <label>
+                <input type="radio" name="property" value="rent">
+                Rent a Property
+            </label>
+        </div>
+
+        <div class="form-section">
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" placeholder="enter up to 100 characters..." maxlength="100"></textarea>
+        </div>
+
+        <h2>Please Provide Your Contact Information</h2>
+
+        <div class="form-section">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I consent to A & S REAL ESTATE contacting me regarding my property inquiry.</label>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">I would like to receive newsletters and property updates from A & S REAL ESTATE.</label>
+        </div>
+
+        <input type="submit" value="submit!">
+
+    </form>
+
+    <div class="social-links">
+        <h3>For More Information Contact....</h3>
+        <a href="mailto:sarahamah777@gmail.com">📧 Email Us</a>
+        <a href="https://wa.me/2349125364540" target="_blank">💬 WhatsApp</a>
+        <a href="https://www.tiktok.com/@theones_0rfh" target="_blank">🎵 TikTok</a>
+        <a href="https://www.instagram.com/theones_0rfh/" target="_blank">📷 Instagram</a>
+    </div>
+
+    <a href="index.html" class="back-home">Back To Home</a>
+
+</body>
+</html>

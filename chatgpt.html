@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A & S Real Estate</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#222;
+      overflow-x:hidden;
+    }
+
+    /* ================= HEADER ================= */
+    header{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(0,0,0,0.55);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:700;
+      color:#fff;
+      letter-spacing:2px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#fff;
+      margin-left:30px;
+      font-size:15px;
+      font-weight:500;
+      transition:0.3s ease;
+      position:relative;
+    }
+
+    nav a::after{
+      content:'';
+      position:absolute;
+      width:0%;
+      height:2px;
+      background:#00c896;
+      left:0;
+      bottom:-5px;
+      transition:0.4s;
+    }
+
+    nav a:hover{
+      color:#00c896;
+    }
+
+    nav a:hover::after{
+      width:100%;
+    }
+
+    /* ================= HERO SECTION ================= */
+    .hero{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+      url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:0 20px;
+    }
+
+    .hero-content{
+      max-width:850px;
+      color:white;
+      animation:fadeIn 1.5s ease;
+    }
+
+    .hero-content h1{
+      font-size:65px;
+      font-weight:700;
+      margin-bottom:20px;
+      line-height:1.1;
+    }
+
+    .hero-content p{
+      font-size:20px;
+      line-height:1.8;
+      margin-bottom:35px;
+      color:#e8e8e8;
+    }
+
+    .hero-buttons a{
+      display:inline-block;
+      text-decoration:none;
+      padding:15px 35px;
+      border-radius:50px;
+      margin:10px;
+      font-size:16px;
+      font-weight:600;
+      transition:0.4s ease;
+    }
+
+    .btn-primary{
+      background:#00c896;
+      color:#fff;
+      box-shadow:0 10px 20px rgba(0,200,150,0.3);
+    }
+
+    .btn-primary:hover{
+      background:#00a77e;
+      transform:translateY(-3px);
+    }
+
+    .btn-secondary{
+      border:2px solid #fff;
+      color:#fff;
+    }
+
+    .btn-secondary:hover{
+      background:#fff;
+      color:#111;
+    }
+
+    /* ================= FEATURES ================= */
+    .features{
+      padding:100px 8%;
+      background:#fff;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      color:#111;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#666;
+      font-size:17px;
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:30px;
+    }
+
+    .feature-card{
+      background:#fff;
+      padding:40px 30px;
+      border-radius:20px;
+      transition:0.4s ease;
+      box-shadow:0 8px 25px rgba(0,0,0,0.07);
+      text-align:center;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .feature-card h3{
+      margin:20px 0 15px;
+      font-size:24px;
+      color:#111;
+    }
+
+    .feature-card p{
+      color:#666;
+      line-height:1.7;
+    }
+
+    .icon{
+      font-size:55px;
+    }
+
+    /* ================= ABOUT ================= */
+    .about{
+      padding:100px 8%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:50px;
+      align-items:center;
+      background:#f4f7fb;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:25px;
+      box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .about-text h2{
+      font-size:45px;
+      margin-bottom:20px;
+      color:#111;
+    }
+
+    .about-text p{
+      font-size:17px;
+      line-height:1.9;
+      color:#555;
+      margin-bottom:25px;
+    }
+
+    /* ================= STATS ================= */
+    .stats{
+      background:#111827;
+      color:#fff;
+      padding:80px 8%;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      text-align:center;
+      gap:40px;
+    }
+
+    .stats-grid h2{
+      font-size:50px;
+      color:#00c896;
+    }
+
+    .stats-grid p{
+      margin-top:10px;
+      font-size:18px;
+      color:#ddd;
+    }
+
+    /* ================= CONTACT ================= */
+    .contact{
+      padding:100px 8%;
+      text-align:center;
+      background:#fff;
+    }
+
+    .contact h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .contact p{
+      color:#666;
+      margin-bottom:40px;
+      font-size:18px;
+    }
+
+    .contact form{
+      max-width:700px;
+      margin:auto;
+    }
+
+    .contact input,
+    .contact textarea{
+      width:100%;
+      padding:18px;
+      margin-bottom:20px;
+      border:none;
+      border-radius:12px;
+      background:#f4f7fb;
+      font-size:16px;
+      outline:none;
+    }
+
+    .contact button{
+      background:#00c896;
+      color:#fff;
+      border:none;
+      padding:16px 40px;
+      border-radius:50px;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.4s;
+    }
+
+    .contact button:hover{
+      background:#00a77e;
+      transform:translateY(-3px);
+    }
+
+    /* ================= FOOTER ================= */
+    footer{
+      background:#0f172a;
+      color:#fff;
+      text-align:center;
+      padding:25px;
+      font-size:15px;
+    }
+
+    /* ================= ANIMATION ================= */
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+        padding:20px;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      nav a{
+        margin:0 10px;
+        font-size:14px;
+      }
+
+      .hero-content h1{
+        font-size:42px;
+      }
+
+      .hero-content p{
+        font-size:16px;
+      }
+
+      .section-title h2,
+      .about-text h2,
+      .contact h2{
+        font-size:34px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">A & S REAL ESTATE</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Properties</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Sign Up</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Affordable Lands, Luxurious Living</h1>
+
+      <p>
+        Discover premium real estate opportunities designed for modern living.
+        We help families, investors, and businesses secure valuable properties
+        with confidence and excellence.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">Explore Properties</a>
+        <a href="#" class="btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+
+    <div class="section-title">
+      <h2>Why Choose Us</h2>
+      <p>
+        We deliver trusted real estate solutions with professionalism and quality.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <div class="icon">🏡</div>
+        <h3>Premium Properties</h3>
+        <p>
+          Carefully selected lands and properties located in fast-growing and secure environments.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">💼</div>
+        <h3>Trusted Investment</h3>
+        <p>
+          Build long-term wealth through verified and profitable real estate investments.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">📍</div>
+        <h3>Strategic Locations</h3>
+        <p>
+          Access properties situated in prime locations with excellent infrastructure and value.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+
+    <div>
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Luxury Home">
+    </div>
+
+    <div class="about-text">
+      <h2>Building Dreams Through Real Estate</h2>
+
+      <p>
+        At A & S Real Estate, we combine innovation, trust, and excellence
+        to provide exceptional property solutions for individuals and businesses.
+      </p>
+
+      <p>
+        Our mission is to make land ownership simple, secure, and accessible
+        while delivering world-class customer experience and long-term value.
+      </p>
+
+      <a href="#" class="btn-primary">Learn More</a>
+    </div>
+
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+
+    <div class="stats-grid">
+
+      <div>
+        <h2>500+</h2>
+        <p>Properties Sold</p>
+      </div>
+
+      <div>
+        <h2>98%</h2>
+        <p>Client Satisfaction</p>
+      </div>
+
+      <div>
+        <h2>10+</h2>
+        <p>Years Experience</p>
+      </div>
+
+      <div>
+        <h2>24/7</h2>
+        <p>Customer Support</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+
+    <h2>Get In Touch</h2>
+
+    <p>
+      Ready to own your dream property? Reach out to our professional team today.
+    </p>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+
+      <input type="email" placeholder="Your Email" required>
+
+      <textarea rows="6" placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 A & S REAL ESTATE | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

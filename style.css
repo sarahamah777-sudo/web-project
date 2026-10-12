@@ -1,0 +1,134 @@
+nav a {
+    color: aliceblue; 
+    margin: 20px; 
+    font-weight: 500; 
+    transition: 0.3s;
+}
+header {
+    background-color: rgb(2, 2, 74); 
+    text-align:center; 
+    border-radius: 5px;
+    margin: 20px;
+    padding: 15px;
+    
+}
+body  {
+     background-image:
+     url('Duplex6.jpeg');
+     background-repeat: repeat-y;
+
+}
+ .properties{
+    padding:50px 8%;
+    background:#f4f7fb;
+}
+
+.property-card{
+    background:#f4f7fb;
+    padding:20px;
+    border-radius:5px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+.property-card img{
+    width:20%;
+    border-radius:10px;
+}
+*{
+    width: 20px;
+    height: 15px;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f3ef;
+    color:#333;
+}
+
+.container{
+    max-width:600px;
+    margin:auto;
+    padding:30px;
+}
+
+.small-title{
+    text-align:center;
+    letter-spacing:4px;
+    color:#777;
+    margin-bottom:20px;
+}
+
+h1{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.options{
+    margin-bottom:30px;
+}
+
+.options label{
+    display:block;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+textarea{
+    width:150%;
+    height:350px;
+    padding:30px;
+    font-size:25px;
+    border:1px solid #999;
+    resize:none;
+    margin-bottom:30px;
+}
+
+.next-btn{
+    width:200%;
+    padding:25px;
+    background:black;
+    color:white;
+    border:none;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.form-section{
+    margin-top:70px;
+}
+
+.form-section h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #999;
+    font-size:18px;
+}
+
+.checkbox{
+    display:flex;
+    gap:10px;
+    margin:20px 0;
+}
+
+.checkbox input{
+    width:auto;
+}
+
+.send-btn{
+    width:100%;
+    padding:18px;
+    background:#8b0000;
+    color:white;
+    border:none;
+    font-size:22px;
+    cursor:pointer;
+}

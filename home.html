@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+     <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        /* HEADER */
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #0d1b2a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1{
+            color: #fff;
+            font-size: 28px;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover{
+            color: gold;
+        }
+
+        /* HERO SECTION */
+        .hero{
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)),
+            url('Duplex.png1.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content h2{
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p{
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn{
+            display: inline-block;
+            padding: 12px 30px;
+            background: gold;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover{
+            background: white;
+        }
+
+        /* FEATURES */
+        .features{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 60px 8%;
+            background: white;
+        }
+
+        .feature-box{
+            background: #f8f8f8;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .feature-box:hover{
+            transform: translateY(-5px);
+        }
+
+        .feature-box h3{
+            margin-bottom: 10px;
+            color: #0d1b2a;
+        }
+
+        /* PROPERTIES */
+        .properties{
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .properties h2{
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: #0d1b2a;
+        }
+
+        .property-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .property-card{
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .property-card:hover{
+            transform: scale(1.03);
+        }
+
+        .property-card img{
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .property-info{
+            padding: 20px;
+        }
+
+        .property-info h3{
+            margin-bottom: 10px;
+        }
+
+        .property-info p{
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        /* FOOTER */
+        footer{
+            background: #0d1b2a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 768px){
+
+            header{
+                flex-direction: column;
+            }
+
+            nav{
+                margin-top: 15px;
+            }
+
+            nav a{
+                margin: 0 10px;
+            }
+
+            .hero-content h2{
+                font-size: 38px;
+            }
+
+            .hero-content p{
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>A & S REAL ESTATE</h1>
+
+        <nav>
+            <a href="home.html">HOME</a>
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="properties.html">PROPERTIES</a>
+            <a href="contactus.html">CONTACT US</a>
+            <a href="signup.html">SIGN UP</a>
+        </nav>
+    </header> 
+
+    <!-- HERO SECTION -->
+     <section class="hero">
+        <div class="hero-content">
+            <h2>Affordable Lands, Comfortable Living</h2>
+            <p>
+                Find trusted and affordable landed properties with comfort,
+                security and great investment opportunities.
+            </p>
+
+        </div>
+     </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="feature-box">
+            <h3>Affordable Lands</h3>
+            <p>
+                We provide affordable and verified landed properties
+                in fast growing locations.
+            </p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Trusted Services</h3>
+            <p>
+                A reliable real estate company focused on customer
+                satisfaction and transparency.
+            </p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Prime Locations</h3>
+            <p>
+                Get lands and properties in developing areas with
+                high investment value.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- PROPERTIES -->
+    <section class="properties">
+
+        <h2>Featured Properties</h2>
+
+        <div class="property-container">
+
+            <div class="property-card">
+                <img src="Duplex.png2.png" alt="Property Image">
+
+                <div class="property-info">
+                    <h3>Luxury Apartments</h3>
+                    <p>Secure and affordable plots available for sale.</p>
+
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="Duplex.png" alt="Property Image">
+
+                <div class="property-info">
+                    <h3>Residential Property</h3>
+                    <p>Comfortable and peaceful environment for families.</p>
+
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="Duplex6.jpeg" alt="Property Image">
+
+                <div class="property-info">
+                    <h3>Luxury Estate</h3>
+                    <p>Perfect location for business and investments.</p>
+
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+               
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 A & S REAL ESTATE | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
